@@ -2,9 +2,9 @@
 
 CSC232 homework and lab C# applications.
 
-## Authors
+## Author
 
-* **Austin Gordon** - *Development* - [GitHub](https://github.com/AustinLeeGordon)
+* **Austin Gordon** - *Development* - [GitHub](https://github.com/AustinLeeGordon) [Website](http://austinleegordon.com)
 
 ## Disclaimer
 
