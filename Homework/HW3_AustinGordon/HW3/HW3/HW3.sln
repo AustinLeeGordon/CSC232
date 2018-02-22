@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PropertyTax", "PropertyTax\PropertyTax.csproj", "{1D9E92EA-AF83-4111-9938-08880537130D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rectangle", "Rectangle\Rectangle.csproj", "{BDCE7932-6346-4891-BDC3-77C2F0A689E3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1D9E92EA-AF83-4111-9938-08880537130D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D9E92EA-AF83-4111-9938-08880537130D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D9E92EA-AF83-4111-9938-08880537130D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D9E92EA-AF83-4111-9938-08880537130D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDCE7932-6346-4891-BDC3-77C2F0A689E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDCE7932-6346-4891-BDC3-77C2F0A689E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDCE7932-6346-4891-BDC3-77C2F0A689E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDCE7932-6346-4891-BDC3-77C2F0A689E3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C373ACE0-2020-4244-A825-8D6E2325DBEC}
+	EndGlobalSection
+EndGlobal
