@@ -19,7 +19,7 @@ namespace PRACTICE_8
             WriteLine("The actually evaluated N values in FOR loop are:\n");
             for (nValue = 0; nValue < 10; nValue++)
             {
-                if (nValue == 5)
+                if (nValue == 15)
                 {
                     break;  //break out of FOR loop when nValue reaches 5
                 }

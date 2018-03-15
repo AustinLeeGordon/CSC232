@@ -14,7 +14,7 @@ namespace PRACTICE_7
              * It guarantees that that the loop body is always executed at least once regardless of the value of the conditional expression written.
              */
 
-            int counter = 10;
+            int counter = 1;
 
             WriteLine("COUNTER" + "\t" + "SQUARED");   //write heading before loop so that it does not repeat
             do                  // No semicolon on this line

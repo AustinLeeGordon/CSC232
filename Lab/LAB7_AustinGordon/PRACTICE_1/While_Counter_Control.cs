@@ -21,7 +21,7 @@ namespace PRACTICE_1
             while (counter < 5)     //test counter variable to enter loop body or not                                 
             {
                 sum = sum + counter;
-                counter++;           //increment counter variable for next round                                            
+                //counter++;           //increment counter variable for next round                                            
             }
 
             WriteLine("Counter Value: " + counter + "     " + "Sum of Values: " + sum  );

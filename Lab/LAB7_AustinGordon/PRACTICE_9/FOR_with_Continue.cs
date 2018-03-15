@@ -18,7 +18,7 @@ namespace PRACTICE_9
             WriteLine("The actually evaluated N values in FOR loop are:\n");
             for (nValue = 0; nValue < 10; nValue++)
             {
-                if (nValue % 2 == 0)
+                if (nValue % 2 == 1)
                 {
                     continue;   //when nvalue is "even", bypass the following statements and go back to top and continue with next iteration
                 }

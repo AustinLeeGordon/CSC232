@@ -14,7 +14,7 @@ namespace PRACTICE_6
              * We can nest a FOR loop within another FOR loop to do come cool things.
              */
 
-            for (int i = 1; i <= 5; i++)
+            for (int i = 5 ; i <= 5; i++)
             {
 
                 for (int j = 1; j <= i; j++)
@@ -26,7 +26,7 @@ namespace PRACTICE_6
 
             }
 
-                              
+            WriteLine("The current value of variable i: {0}", i);
 
             ReadKey();
         }
