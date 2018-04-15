@@ -1,7 +1,7 @@
 ﻿/*
  * AUTHOR: Austin Gordon
- * DATE: April 12, 2018
- * PURPOSE: Math Trainer Application Addition Methods
+ * DATE: April 15, 2018
+ * PURPOSE: Math Trainer Application Subtraction Methods
  */
 
 using System;
@@ -10,29 +10,29 @@ using System.Windows.Forms;
 
 namespace MathTrainer
 {
-    class Addition
+    class Subtraction
     {
-        public static void Add()
+        public static void Subtract()
         {
-            /*  This method allows user to practice integer addition in 3 levels of difficulty
+            /*  This method allows user to practice integer subtraction in 3 levels of difficulty
              *  PARAM: None
              *  RETURN: None 
              */
 
             string selected = null;
 
-            selected = MathTrainer.DifficultyLevelMenu("ADDITION");
+            selected = MathTrainer.DifficultyLevelMenu("SUBTRACTION");
 
             switch (selected)
             {
                 case "1":
-                    EasyAdd();
+                    EasySubtract();
                     break;
                 case "2":
-                    ModerateAdd();
+                    ModerateSubtract();
                     break;
                 case "3":
-                    HardAdd();
+                    HardSubtract();
                     break;
                 case "4":
                     break;
@@ -40,17 +40,17 @@ namespace MathTrainer
 
             return;
 
-        } //Add()
+        } //Subtract()
 
-        public static void EasyAdd()
+        public static void EasySubtract()
         {
-            /*  This method allows user to practice "easy" integer addition using random single-digit numbers,
+            /*  This method allows user to practice "easy" integer subtraction using random single-digit numbers,
              *   and displays useful statistics at the end.
              *  PARAM: None
              *  RETURN: None 
              */
 
-            bool moreData = true;
+            bool moreData = true; 
             string level = "Easy";
             string strAnswer = null;
             int intAnswer = 0, correctAnswer, count = 0, userCorrect = 0, userWrong = 0;
@@ -62,35 +62,35 @@ namespace MathTrainer
 
                 int op1 = objRandomNum.Next(1, 10); //random operand between [1-9]
                 int op2 = objRandomNum.Next(1, 10); //random operand between [1-9]
-                correctAnswer = op1 + op2;
+                correctAnswer = op1 - op2;
 
                 Clear();
 
                 //print header and question
-                Helpers.printHeader("add", level);
-                Helpers.printQuestion(op1, op2, ref count, "+");
+                Helpers.printHeader("subtract", level);
+                Helpers.printQuestion(op1, op2, ref count, "-");
 
                 //get answer and parse it
                 strAnswer = Helpers.getUserAnswer();
-                int.TryParse(strAnswer, out intAnswer); //invalid data is converted to answer=zero              
+                int.TryParse(strAnswer, out intAnswer);  //invalid data is converted to answer=zero
 
                 //check answer
                 Helpers.checkAnswer(intAnswer, correctAnswer, ref userCorrect, ref userWrong);
 
                 //ask user if they want another problem
-                moreData = Helpers.checkProceed("addition", level);
+                moreData = Helpers.checkProceed("subtraction", level);
 
             }
 
-            MathTrainer.DisplayStatistics("ADDITION", level, count, userCorrect, userWrong);
+            MathTrainer.DisplayStatistics("SUBTRACTION", level, count, userCorrect, userWrong);
 
             return;
 
-        }  //EasyAdd()
+        } //EasySubtract()
 
-        public static void ModerateAdd()
+        public static void ModerateSubtract()
         {
-            /*  This method allows user to practice "moderate" integer addition using one random single-digit number
+            /*  This method allows user to practice "moderate" integer subtraction using one random single-digit number
              *   and one two-digit number, and displays useful statistics at the end.
              *  PARAM: None
              *  RETURN: None 
@@ -105,16 +105,16 @@ namespace MathTrainer
 
             while (moreData == true)
             {
-                
+
                 int op1 = objRandomNum.Next(1, 10); //random operand between [1-9]
                 int op2 = objRandomNum.Next(10, 100); //random operand between [10-99]
-                correctAnswer = op1 + op2;
+                correctAnswer = op1 - op2;
 
                 Clear();
 
                 //print header and question
-                Helpers.printHeader("add", level);
-                Helpers.printQuestion(op1, op2, ref count, "+");
+                Helpers.printHeader("subtract", level);
+                Helpers.printQuestion(op1, op2, ref count, "-");
 
                 //get answer and parse it
                 strAnswer = Helpers.getUserAnswer();
@@ -124,25 +124,25 @@ namespace MathTrainer
                 Helpers.checkAnswer(intAnswer, correctAnswer, ref userCorrect, ref userWrong);
 
                 //ask user if they want another problem
-                moreData = Helpers.checkProceed("addition", level);
+                moreData = Helpers.checkProceed("subtraction", level);
 
             }
 
-            MathTrainer.DisplayStatistics("ADDITION", level, count, userCorrect, userWrong);
+            MathTrainer.DisplayStatistics("SUBTRACTION", level, count, userCorrect, userWrong);
 
             return;
 
-        } //ModerateAdd()
+        } //ModerateSubtract()
 
-        public static void HardAdd()
+        public static void HardSubtract()
         {
-            /*  This method allows user to practice "hard" integer addition using two random two-digit numbers,
+            /*  This method allows user to practice "hard" integer subtraction using two random two-digit numbers,
              *   and displays useful statistics at the end.
              *  PARAM: None
              *  RETURN: None 
              */
 
-            bool moreData = true;
+            bool moreData = true; 
             string level = "Hard";
             string strAnswer = null;
             int intAnswer = 0, correctAnswer, count = 0, userCorrect = 0, userWrong = 0;
@@ -154,13 +154,13 @@ namespace MathTrainer
 
                 int op1 = objRandomNum.Next(10, 100); //random operand between [10-99]
                 int op2 = objRandomNum.Next(10, 100); //random operand between [10-99]
-                correctAnswer = op1 + op2;
+                correctAnswer = op1 - op2;
 
                 Clear();
 
                 //print header and question
-                Helpers.printHeader("add", level);
-                Helpers.printQuestion(op1, op2, ref count, "+");
+                Helpers.printHeader("subtract", level);
+                Helpers.printQuestion(op1, op2, ref count, "-");
 
                 //get answer and parse it
                 strAnswer = Helpers.getUserAnswer();
@@ -170,14 +170,14 @@ namespace MathTrainer
                 Helpers.checkAnswer(intAnswer, correctAnswer, ref userCorrect, ref userWrong);
 
                 //ask user if they want another problem
-                moreData = Helpers.checkProceed("addition", level);
+                moreData = Helpers.checkProceed("subtraction", level);
 
             }
 
-            MathTrainer.DisplayStatistics("ADDITION", level, count, userCorrect, userWrong);
+            MathTrainer.DisplayStatistics("SUBTRACTION", level, count, userCorrect, userWrong);
 
             return;
 
-        } //HardAdd()
+        } //HardSubtract()
     } //class
 } //namespace
