@@ -58,12 +58,13 @@
             // 
             // heightFtTextBox
             // 
+            this.heightFtTextBox.BackColor = System.Drawing.Color.White;
             this.heightFtTextBox.Font = new System.Drawing.Font("Arial", 12F);
             this.heightFtTextBox.Location = new System.Drawing.Point(19, 110);
             this.heightFtTextBox.Margin = new System.Windows.Forms.Padding(10);
-            this.heightFtTextBox.MinimumSize = new System.Drawing.Size(50, 35);
+            this.heightFtTextBox.MinimumSize = new System.Drawing.Size(50, 30);
             this.heightFtTextBox.Name = "heightFtTextBox";
-            this.heightFtTextBox.Size = new System.Drawing.Size(50, 35);
+            this.heightFtTextBox.Size = new System.Drawing.Size(50, 30);
             this.heightFtTextBox.TabIndex = 1;
             this.heightFtTextBox.TextChanged += new System.EventHandler(this.heightFt_TextChanged);
             // 
@@ -78,13 +79,15 @@
             // 
             // heightInTextBox
             // 
-            this.heightInTextBox.Font = new System.Drawing.Font("Arial", 9F);
+            this.heightInTextBox.BackColor = System.Drawing.Color.White;
+            this.heightInTextBox.Font = new System.Drawing.Font("Arial", 12F);
             this.heightInTextBox.Location = new System.Drawing.Point(126, 110);
             this.heightInTextBox.Margin = new System.Windows.Forms.Padding(10);
-            this.heightInTextBox.MinimumSize = new System.Drawing.Size(50, 35);
+            this.heightInTextBox.MinimumSize = new System.Drawing.Size(50, 30);
             this.heightInTextBox.Name = "heightInTextBox";
-            this.heightInTextBox.Size = new System.Drawing.Size(50, 35);
+            this.heightInTextBox.Size = new System.Drawing.Size(50, 30);
             this.heightInTextBox.TabIndex = 2;
+            this.heightInTextBox.TextChanged += new System.EventHandler(this.heightInTextBox_TextChanged);
             // 
             // ftLabel
             // 
@@ -127,13 +130,15 @@
             // 
             // weightTextBox
             // 
+            this.weightTextBox.BackColor = System.Drawing.Color.White;
             this.weightTextBox.Font = new System.Drawing.Font("Arial", 12F);
             this.weightTextBox.Location = new System.Drawing.Point(273, 110);
             this.weightTextBox.Margin = new System.Windows.Forms.Padding(10);
-            this.weightTextBox.MinimumSize = new System.Drawing.Size(75, 35);
+            this.weightTextBox.MinimumSize = new System.Drawing.Size(75, 30);
             this.weightTextBox.Name = "weightTextBox";
-            this.weightTextBox.Size = new System.Drawing.Size(75, 35);
+            this.weightTextBox.Size = new System.Drawing.Size(75, 30);
             this.weightTextBox.TabIndex = 3;
+            this.weightTextBox.TextChanged += new System.EventHandler(this.weightTextBox_TextChanged);
             // 
             // computeButton
             // 
@@ -145,9 +150,10 @@
             this.computeButton.Location = new System.Drawing.Point(19, 180);
             this.computeButton.Name = "computeButton";
             this.computeButton.Size = new System.Drawing.Size(139, 54);
-            this.computeButton.TabIndex = 9;
+            this.computeButton.TabIndex = 4;
             this.computeButton.Text = "Compute";
             this.computeButton.UseVisualStyleBackColor = false;
+            this.computeButton.Click += new System.EventHandler(this.computeButton_Click);
             // 
             // resetButton
             // 
@@ -158,9 +164,10 @@
             this.resetButton.Location = new System.Drawing.Point(183, 180);
             this.resetButton.Name = "resetButton";
             this.resetButton.Size = new System.Drawing.Size(139, 54);
-            this.resetButton.TabIndex = 10;
+            this.resetButton.TabIndex = 5;
             this.resetButton.Text = "Reset";
             this.resetButton.UseVisualStyleBackColor = false;
+            this.resetButton.Click += new System.EventHandler(this.resetButton_Click);
             // 
             // BMIOutput
             // 
@@ -185,7 +192,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.ClientSize = new System.Drawing.Size(482, 359);
+            this.ClientSize = new System.Drawing.Size(556, 344);
             this.Controls.Add(this.weightStatusOutput);
             this.Controls.Add(this.BMIOutput);
             this.Controls.Add(this.resetButton);
@@ -199,7 +206,6 @@
             this.Controls.Add(this.heightLabel);
             this.Controls.Add(this.heightFtTextBox);
             this.Controls.Add(this.appHeading);
-            this.Enabled = false;
             this.Name = "BMIAppForm";
             this.Text = "BMI App";
             this.ResumeLayout(false);
